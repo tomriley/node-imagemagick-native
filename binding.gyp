@@ -9,8 +9,8 @@
     }],
     ['OS=="mac"', {
       'variables': {
-        # matches 10.9.X , 10.10 and outputs 10.9, 10.10, 10.11, 10.12, 10.13
-        'OSX_VER%': "<!(sw_vers | grep 'ProductVersion:' | grep -o '10.[0-9]*')",
+        # matches 10/11/12.X.X , 10.9, 11.2 etc
+        'OSX_VER%': "<!(sw_vers | grep 'ProductVersion:' | grep -o '1[0-2].[0-9]*')",
       }
     }, {
       'variables': {
